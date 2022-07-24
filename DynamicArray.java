@@ -74,6 +74,38 @@ public class DynamicArray<T> {
         arr[lenArr++] = element;
     }
 
+    public Object removeElementAt(int index) {
+
+        T rmElement = arr[index];
+        if (index > lenArr)
+            throw new IndexOutOfBoundsException();
+
+        T[] new_arr = (T[]) new Object[lenArr - 1];
+
+        for (int i = 0, j = 0; i < lenArr; i++, j++) {
+            if (i == index) // if remove index is equal skip over
+                ++j;
+            else
+                new_arr[j] = arr[i];
+        }
+
+        arr = new_arr;
+        capArr = lenArr--;
+
+        return rmElement;
+    }
+
+    public boolean removeElement(Object elm) {
+        // get index of element
+        int rmElementIndex = indexElement(elm);
+
+        if (rmElementIndex != -1) { // if element exist remove it else return false
+            removeElementAt(rmElementIndex);
+            return true;
+        }
+        return false;
+    }
+
     @Override
     public String toString() {
         String temp = "";
