@@ -1,4 +1,7 @@
-
+/*
+ * Generic Dynamic Array Implementation
+ * Author: Priyank Thakur
+ */
 @SuppressWarnings("unchecked")
 
 public class DynamicArray<T> {
