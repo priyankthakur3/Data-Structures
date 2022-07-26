@@ -193,10 +193,10 @@ public class DoubleLinkedList<T> {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("[ ");
-        Node<T> trav = head;
-        while (trav != null) {
-            sb.append(trav.data + ", ");
-            trav = trav.next;
+        Node<T> travnNode = head;
+        while (travnNode != null) {
+            sb.append(travnNode.data + ", ");
+            travnNode = travnNode.next;
         }
 
         return sb.substring(0, sb.length() - 2) + " ]";
