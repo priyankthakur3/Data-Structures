@@ -1,5 +1,5 @@
 /*
- * Generic Dynamic Array Implementation
+ * Generic Double Linked List Implementation
  * Author: Priyank Thakur
  */
 
